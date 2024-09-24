@@ -11,4 +11,9 @@ const BookingSchema = new Schema({
     clientNotes: { type: String },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
-  });
+});
+
+export const BookingModel = mongoose.model('Booking', BookingSchema);
+
+export const getAllBookings = () => BookingModel.find();
+export const createBooking = () => BookingModel.create();
