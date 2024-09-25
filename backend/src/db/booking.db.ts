@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import {Booking} from '../models/booking.model'
 const { Schema } = mongoose;
 
 const BookingSchema = new Schema({
@@ -15,5 +16,7 @@ const BookingSchema = new Schema({
 
 export const BookingModel = mongoose.model('Booking', BookingSchema);
 
-export const getAllBookings = () => BookingModel.find();
-export const createBooking = () => BookingModel.create();
+export const getAll = () => BookingModel.find();
+export const getById = (id: string) => BookingModel.findById(id);
+export const create = (booking: Record<string,any>) => new BookingModel(booking)
+    .save().then((user) => user.toObject());
