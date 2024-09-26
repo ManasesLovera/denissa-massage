@@ -20,3 +20,5 @@ export const getAll = () => BookingModel.find();
 export const getById = (id: string) => BookingModel.findById(id);
 export const create = (booking: Record<string,any>) => new BookingModel(booking)
     .save().then((user) => user.toObject());
+export const deleteById = (id: string) => BookingModel.findOneAndDelete({ _id: id});
+export const updateById = (id: string, values: Record<string, any>) => BookingModel.findByIdAndUpdate(id, values);
