@@ -1,4 +1,4 @@
-export type Booking = {
+export interface Booking {
     clientId: number,
     serviceId: number,
     date: Date;
