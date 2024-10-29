@@ -1,5 +1,3 @@
-// src/dto/client.dto.ts
-
 export interface CreateClientDTO {
     name: string;
     phoneNumber: number;

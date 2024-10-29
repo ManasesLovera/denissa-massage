@@ -1,5 +1,3 @@
-// src/dto/admin.dto.ts
-
 export interface CreateAdminDTO {
     name: string;
     phoneNumber: number;

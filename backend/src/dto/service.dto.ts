@@ -1,5 +1,3 @@
-// src/dto/service.dto.ts
-
 export interface CreateServiceDTO {
     name: string;
     description: string;

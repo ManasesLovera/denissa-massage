@@ -1,5 +1,3 @@
-// src/dto/booking.dto.ts
-
 export interface CreateBookingDTO {
     clientId: string; // Reference to Client ID
     serviceId: string; // Reference to Service ID
